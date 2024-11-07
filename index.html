@@ -1,0 +1,1520 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>C+</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!--Google Fonts link-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="assetsss/css/style.css">
+
+  <link rel="stylesheet" href="assets/css/iconfont.css">
+  <link rel="stylesheet" href="assets/css/slick/slick.css">
+  <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/plugins.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assetss/css/style.css">
+  <link rel="stylesheet" href="assetss/css/fontawesome.css">
+  <link rel="stylesheet" href="assetss/css/owl.css">
+  <link rel="stylesheet" href="assetss/css/plus.css">
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <style>
+    .navbar-brand img {
+      height: 6em;
+      width: 9em;
+    }
+
+    .nav>li>a {
+      font-size: 1em;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'open sans', sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      z-index: 99;
+      width: 100%;
+
+      background: rgba(36, 36, 37, 0.479);
+      /* Semi-transparent background */
+      backdrop-filter: blur(10px);
+      /* Adds a blur effect */
+      -webkit-backdrop-filter: blur(10px);
+
+
+    }
+
+    nav .wrapper {
+      position: relative;
+      max-width: 1300px;
+      padding: 0px 30px;
+      height: 70px;
+      line-height: 70px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wrapper .logo a {
+      color: #f2f2f2;
+      font-size: 1.5em;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .wrapper .nav-links {
+      display: inline-flex;
+    }
+
+    .nav-links li {
+      list-style: none;
+    }
+
+    .nav-links li a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 9px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      background: #3A3B3C;
+    }
+
+    .nav-links .mobile-item {
+      display: none;
+    }
+
+    .nav-links .drop-menu {
+      position: absolute;
+      background: rgb(0, 0, 0);
+      /* Semi-transparent background */
+      backdrop-filter: blur(10px);
+      /* Adds a blur effect */
+      -webkit-backdrop-filter: blur(10px);
+
+
+      width: 180px;
+      line-height: 45px;
+      top: 85px;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0);
+    }
+
+    .nav-links li:hover .drop-menu,
+    .nav-links li:hover .mega-box {
+      transition: all 0.3s ease;
+      top: 70px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drop-menu li a {
+      width: 100%;
+      display: block;
+      padding: 0 0 0 15px;
+      font-weight: 400;
+      border-radius: 0px;
+    }
+
+    .mega-box {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      top: 85px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .mega-box .content {
+      background: rgb(0, 0, 0);
+      /* Semi-transparent background */
+      backdrop-filter: blur(10px);
+      /* Adds a blur effect */
+      -webkit-backdrop-filter: blur(10px);
+
+
+      padding: 25px 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .mega-box .content .row {
+      width: calc(25% - 30px);
+      line-height: 45px;
+    }
+
+    .content .row img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content .row header {
+      color: #f2f2f2;
+      font-size: 1em;
+      font-weight: 500;
+    }
+
+    .content .row .mega-links {
+      margin-left: -40px;
+      border-left: 1px solid rgba(0, 0, 0, 0.687);
+    }
+
+    .row .mega-links li {
+      padding: 0 20px;
+    }
+
+    .row .mega-links li a {
+      padding: 0px;
+      padding: 0 20px;
+      color: #d9d9d9;
+      font-size: 1em;
+      display: block;
+    }
+
+    .row .mega-links li a:hover {
+      color: #f2f2f2;
+    }
+
+    .wrapper .btn {
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      display: none;
+    }
+
+    .wrapper .btn.close-btn {
+      position: absolute;
+      right: 30px;
+      top: 10px;
+    }
+
+
+    @media screen and (max-width: 970px) {
+      .wrapper .btn {
+        display: block;
+      }
+
+      .wrapper .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 350px;
+        top: 0;
+        left: -100%;
+        background: #242526;
+        display: block;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.521);
+        transition: all 0.3s ease;
+      }
+
+
+
+      #menu-btn:checked~.nav-links {
+        left: 0%;
+      }
+
+      #menu-btn:checked~.btn.menu-btn {
+        display: none;
+      }
+
+      #close-btn:checked~.btn.menu-btn {
+        display: block;
+      }
+
+      .nav-links li {
+        margin: 15px 10px;
+      }
+
+      .nav-links li a {
+        padding: 0 20px;
+        display: block;
+        font-size: 1em;
+      }
+
+      .nav-links .drop-menu {
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+      }
+
+      #showDrop:checked~.drop-menu,
+      #showMega:checked~.mega-box {
+        max-height: 100%;
+      }
+
+      .nav-links .desktop-item {
+        display: none;
+      }
+
+      .nav-links .mobile-item {
+        display: block;
+        color: #f2f2f2;
+        font-size: 1em;
+        font-weight: 500;
+        padding-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-links .mobile-item:hover {
+        background: #3A3B3C;
+      }
+
+      .drop-menu li {
+        margin: 0;
+      }
+
+      .drop-menu li a {
+        border-radius: 5px;
+        font-size: 1em;
+      }
+
+      .mega-box {
+        position: static;
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+        padding: 0 20px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .mega-box .content {
+        box-shadow: none;
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+      }
+
+      .mega-box .content .row {
+        width: 100%;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .mega-box .content .row:nth-child(1),
+      .mega-box .content .row:nth-child(2) {
+        border-top: 0px;
+      }
+
+      .content .row .mega-links {
+        border-left: 0px;
+        padding-left: 15px;
+      }
+
+      .row .mega-links li {
+        margin: 0;
+      }
+
+      .content .row header {
+        font-size: 1em;
+      }
+    }
+
+    nav input {
+      display: none;
+    }
+  </style>
+
+  <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse">
+
+
+  <div class="culmn">
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><img src="assets/images/Logo_2-removebg-preview.png" alt="" style="height: 4em; width: 6em;">
+        </div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fa fa-times fa-2x"></i></label>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li>
+            <a href="#" class="desktop-item">Book our hall</a>
+            <input type="checkbox" id="showDrop">
+
+            <ul class="drop-menu">
+              <li><a href="contact.html">Book Hall</a></li>
+              <li><a href="wa.link/a38vhm">Get Prayer </a></li>
+              <li><a href="contact.html">Join The C+ Family</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-item">Support </a>
+            <input type="checkbox" id="showDrop">
+
+            <ul class="drop-menu">
+              <li><a href="https://paystack.com/pay/pluspartnership">Donate to the Church</a></li>
+              <li><a href="https://paystack.com/pay/pluspartnership">Sponsor a Child</a></li>
+              <li><a href="https://paystack.com/pay/pluspartnership">Plus Partnership Dues</a></li>
+              <li><a href="https://paystack.com/pay/pluspartnership">Volunteer Opportunities</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-item">Counseling</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Services Menu</label>
+            <div class="mega-box">
+              <div class="content">
+                <!-- Image section -->
+                <div class="row">
+                  <img src="pexels-pixabay-372326.jpg" alt="Counseling Session">
+                </div>
+
+                <!-- Individual Counseling -->
+                <div class="row">
+                  <header>Individual Counseling</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Personal Growth</a></li>
+                    <li><a href="#">Stress Management</a></li>
+                    <li><a href="#">Grief Counseling</a></li>
+                    <li><a href="#">Confidence Building</a></li>
+                  </ul>
+                </div>
+
+                <!-- Group Counseling -->
+                <div class="row">
+                  <header>Group Counseling</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Support Groups</a></li>
+                    <li><a href="#">Family Counseling</a></li>
+                    <li><a href="#">Addiction Recovery</a></li>
+                    <li><a href="#">Youth Empowerment</a></li>
+                  </ul>
+                </div>
+
+                <!-- Spiritual Guidance -->
+                <div class="row">
+                  <header>Spiritual Guidance</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Faith-Based Counseling</a></li>
+                    <li><a href="#">Life Purpose Coaching</a></li>
+                    <li><a href="#">Meditation and Mindfulness</a></li>
+                    <li><a href="#">Prayer Support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fa fa-bars fa-2x" style="margin-bottom: 0.5em;"></i>
+        </label>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+  <!--home Section -->
+  <section id="home" class="home">
+    <div class="overlay">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 ">
+            <div class="main_home_slider text-center">
+              <div class="single_home_slider">
+                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                  <h3 style="font-size: 1.5em; font-weight: 300;color: white;"> Church of God mission Church Plus</h3>
+                  <h1>CHANGED BY GOD'S WORD TO CHANGE OUR WORLD</h1>
+                  <div class="separator"></div>
+                  <p style="font-size: 1em; font-weight: 300;">Join us in our journey of worship, fellowship, and
+                    service. At Church
+                    Plus, we strive to foster a community where everyone is welcomed, cherished, and empowered.</p>
+                  <div class="button-container">
+                    <button class="button3d">Worship with Us</button>
+                    <button class="button3d">Learn More</button>
+                  </div>
+                  <style>
+                    /* Container to center buttons side by side */
+                    .button-container {
+                      display: flex;
+                      justify-content: center;
+                      gap: 20px;
+                      flex-wrap: wrap;
+                      /* Makes buttons stack on smaller screens */
+                      margin-top: 20px;
+                    }
+
+                    /* Button Styling */
+                    .button3d {
+                      padding: 10px 20px;
+                      font-size: 0.8em;
+                      font-weight: bold;
+                      color: #fff;
+                      background: #000000;
+                      /* Button color */
+                      border: none;
+                      border-radius: 8px;
+                      box-shadow: 0px 5px 0px #2980b9;
+                      /* 3D shadow */
+                      cursor: pointer;
+                      transition: all 0.2s ease;
+                    }
+
+                    /* 3D effect on hover */
+                    .button3d:hover {
+                      box-shadow: 0px 3px 0px #2980b9;
+                      /* Reduce shadow on hover */
+                      transform: translateY(2px);
+                      /* Button moves down slightly */
+                    }
+
+                    /* Active (pressed) state */
+                    .button3d:active {
+                      box-shadow: 0px 1px 0px #2980b9;
+                      transform: translateY(4px);
+                    }
+
+                    /* Responsive design: Stack buttons vertically on small screens */
+                    @media (max-width: 600px) {
+                      .button-container {
+                        flex-direction: column;
+                        align-items: center;
+                      }
+                    }
+                  </style>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <!--End of home section -->
+
+  <!--feature section -->
+  <section id="feature" class="feature sections">
+    <div class="container">
+      <div class="row">
+        <div class="main_feature text-center">
+
+          <div class="col-sm-3">
+            <div class="single_feature">
+              <div class="single_feature_icon">
+                <i class="fa fa-globe" style="font-size: 2em;"></i>
+              </div>
+
+              <h4 style="font-size: 1em;">MISSION STATEMENT</h4>
+              <div class="separator3"></div>
+              <p style="font-size: 1em;">The Mission statement of Church Plus is to spread the gospel of Jesus Christ,
+                and to develop women leaders who are deeply rooted in Christ.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="single_feature">
+              <div class="single_feature_icon">
+                <i class="fa fa-users" style="font-size: 2em;"></i>
+              </div>
+
+              <h4 style="font-size: 1em ; ">VISION STATEMENT</h4>
+              <div class="separator3"></div>
+              <p style="font-size: 1em ; ">The CGMI Church Plus Vision Statement is building people into leadership,
+                with a global passion, deeply rooted in Christ.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="single_feature">
+              <div class="single_feature_icon">
+                <i class="fa fa-fire" style="font-size: 2em;"></i>
+              </div>
+              <h4 style="font-size: 1em ; ">CGMI CREED</h4>
+              <div class="separator3"></div>
+              <p style="font-size: 1em;">Raise up an army for me, to go with the gospel to all Nations. Gather
+                together those whom I have called and I will send them with the fire of my spirit. </p>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="single_feature">
+              <div class="single_feature_icon">
+                <i class="fa fa-heart" style="font-size: 2em;"></i>
+              </div>
+
+              <h4 style="font-size: 1em ; ">OUR VALUES</h4>
+              <div class="separator3"></div>
+              <p style="font-size: 1em;">Sermons or messages focusing on the importance of loving one another and
+                showing compassion to those in need.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--End of container -->
+  </section>
+
+
+  <div id="portfolio" class="our-portfolio section">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <span>OUTREACH SERVICE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-portfolio">
+
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-rdne-6646883.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#" target="_parent">
+                      <h4>First Project</h4>
+                    </a>
+                    <span>COMMUNITY OUTREACH FOR IGUMOMO VILLAGE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-shvetsa-5029852.jpg " alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>Project TWO</h4>
+                    </a>
+                    <span>TALK SHOW HFHJHVDHOOL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-rdne-6646883.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#" target="_parent">
+                      <h4>Third Project</h4>
+                    </a>
+                    <span>Sdvgfjhgbjhbvjhb</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-rdne-6646883.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>Project Four</h4>
+                    </a>
+                    <span>Websi nvvjkvrjg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-rdne-6646883.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>Sixth Project</h4>
+                    </a>
+                    <span>nfjgnrerbg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-shvetsa-5029852.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>7th Project</h4>
+                    </a>
+                    <span>gberjhbgrg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-rdne-6646883.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>8th Project</h4>
+                    </a>
+                    <span>mnerjgnerg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-liza-summer-6347743.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>9th Project</h4>
+                    </a>
+                    <span>nerjkgrje</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-shvetsa-5029852.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>Project Ten</h4>
+                    </a>
+                    <span>bjbetgtjgt</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-shvetsa-5029852.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>Project Eleven</h4>
+                    </a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assetss/images/pexels-rdne-6646883.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#">
+                      <h4>12th Project</h4>
+                    </a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="history" class="history sections">
+    <div class="container">
+      <div class="row">
+        <div class="main_history">
+          <div class="col-sm-6">
+            <!-- Video at the side -->
+            <div class="single_history_video">
+              <iframe width="90%" height="400" src="https://www.youtube.com/embed/O_PO72r5P1I?si=B4zjCgRF7lp0H4l1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 5px;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="single_history_content">
+            <div class="head_title" style="margin-bottom: 10px;">
+              <h2 style="margin-bottom: 1.3em;">ARE YOU READY FOR CHURCH?</h2>
+            </div>
+            <p style="font-size: 1em; margin-top: 0;">Join us for our live worship service as we gather together to
+              praise, pray, and study God's Word. While you watch, take a moment to explore the resources and
+              opportunities available to you
+            </p>
+            <div class="center" style="text-align: center;">
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#" target="_blank">
+                    <i class="fa fa-whatsapp" style="font-size: 1.4em; color: blue;"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank">
+                    <i class="fa fa-instagram" style="font-size: 1.4em; color: blue;"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank">
+                    <i class="fa fa-twitter" style="font-size: 1.4em; color: blue;"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank">
+                    <i class="fa fa-spotify" style="font-size: 1.4em; color: blue;"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p style="font-size: 1em;">Join us for our live worship service as we gather together to praise, pray, and
+              study God's Word. While you watch, take a moment to explore the resources and opportunities available to
+              you</p>
+            <a href="https://wa.link/q65s14" class="button3d" style="font-size: 0.8em;" target="_blank">PRAY FOR
+              ME</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- service Section -->
+  <section id="service" class="service">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="main_service">
+          <div class="col-md-6 col-sm-12 no-padding">
+
+            <div class="single_service single_service_text text-right">
+              <div class="head_title">
+                <h2>OUR VALUES</h2>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+                  <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+                      <article class="single_service_right_text">
+                        <h4>Love and Compassion</h4>
+                        <p>We believe in showing love and compassion to all members of our church
+                          family and the community. We believe in showing love and compassion to all members of our
+                          church
+                          family and the community.</p>
+                      </article>
+                    </div>
+                    <div class="col-sm-1 col-xs-1">
+                      <figure class="single_service_icon">
+                        <i class="fa fa-heart" style="font-size: 24px;"></i>
+                      </figure><!-- End of figure -->
+                    </div>
+                  </div>
+                </div><!-- End of col-sm-12 -->
+
+                <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+                  <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+                      <article class="single_service_right_text">
+                        <h4>Faith and Worship</h4>
+                        <p>We uphold the importance of faith and worship as essential aspects of
+                          our spiritual journey. We believe in showing love and compassion to all members of our church
+                          family and the community.</p>
+                      </article>
+                    </div>
+                    <div class="col-sm-1 col-xs-1">
+                      <figure class="single_service_icon">
+                        <i class="fa fa-plus" style="font-size: 24px;"></i>
+                      </figure><!-- End of figure -->
+                    </div>
+                  </div>
+                </div><!-- End of col-sm-12 -->
+
+                <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+                  <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
+                      <article class="single_service_right_text">
+                        <h4>Community Outreach</h4>
+                        <p>We are committed to serving and supporting our local community through
+                          outreach programs and charitable initiatives.We are committed to serving and supporting our
+                          local community through
+                          outreach programs and charitable initiatives.</p>
+                      </article>
+                    </div>
+                    <div class="col-sm-1 col-xs-1">
+                      <figure class="single_service_icon">
+                        <i class="fa fa-users" style="font-size: 24px;"></i>
+                      </figure><!-- End of figure -->
+                    </div>
+                  </div>
+                </div><!-- End of col-sm-12 -->
+
+              </div>
+            </div>
+          </div><!-- End of col-sm-6 -->
+
+          <div class="col-md-6 col-sm-12 no-padding">
+            <figure class="single_service single_service_img">
+              <div class="overlay-img"></div>
+              <img src="assetss/images/pexels-caleboquendo-8147320.jpg" alt="" />
+            </figure><!-- End of figure -->
+          </div><!-- End of col-sm-6 -->
+
+        </div>
+      </div><!-- End of row -->
+    </div><!-- End of Container-fluid -->
+  </section><!-- End of service Section -->
+
+  <div id="video" class="our-videos section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-8">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto"
+                            src="https://www.youtube.com/embed/O_PO72r5P1I?si=B4zjCgRF7lp0H4l1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                          <div class="overlay-effect">
+                            <a href="#">
+                              <h4>Messages</h4>
+                            </a>
+                            <span> Rev Dr carl umakhihe</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto"
+                            src="https://www.youtube.com/embed/O_PO72r5P1I?si=B4zjCgRF7lp0H4l1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                          <div class="overlay-effect">
+                            <a href="#">
+                              <h4>Prayer and God</h4>
+                            </a>
+                            <span> Rev Fidelis Okhuomaruyi</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto"
+                            src="https://www.youtube.com/embed/O_PO72r5P1I?si=B4zjCgRF7lp0H4l1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                          <div class="overlay-effect">
+                            <a href="#">
+                              <h4>Business Success</h4>
+                            </a>
+                            <span>Rev Osas Oghogho </span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto"
+                            src="https://www.youtube.com/embed/O_PO72r5P1I?si=B4zjCgRF7lp0H4l1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                          <div class="overlay-effect">
+                            <a href="#">
+                              <h4>Family Matters</h4>
+                            </a>
+                            <span>Rev. Dr Carl Umakhihe</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="menu">
+                    <div class="active">
+                      <div class="thumb">
+                        <img src="assets/images/Untitled_design__3_-removebg-preview.png" alt="" height="150em">
+                        <div class="inner-content">
+                          <h4>Messages</h4>
+                          <span> Rev Dr carl umakhihe</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="assets/images/Untitled design.jpg" alt="" height="150em">
+                        <div class="inner-content">
+                          <h4>Prayer and God</h4>
+                          <span> Rev Fidelis Okhuomaruyi</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="assets/images/Untitled_design__1_-removebg-preview.png" alt="" height="150em">
+                        <div class="inner-content">
+                          <h4>Business Success</h4>
+                          <span>Rev Osas Oghogho </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="assets/images/Untitled design (2).jpg" alt="" height="150em">
+                        <div class="inner-content">
+                          <h4>Family Matters</h4>
+                          <span>Rev. Dr Carl Umakhihe</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section id="study" class="study  wow fadeIn" data-wow-duration="2s" data-wow-dealy="1.5s">
+      <div class="container">
+        <div class="row">
+          <div class="main_study_area sections">
+            <div class="head_title text-center">
+              <h2>ABOUT</h2>
+              <div class="separator"></div>
+              <div class="subtitle">
+                A brief story about how church plus was founded
+              </div>
+
+            </div>
+            <div class="single_study_content">
+              <div class="col-sm-6">
+                <div class="single_study_slid_area">
+
+                  <div class="single_study_text">
+                    <div class="study_slider">
+                      <div class="item">
+
+                        <h4 style="text-align: center;">HISTORY</h4>
+                        <div class="separator3"></div>
+
+                        <p style="font-size: 0.9em;">Founded in 2011, CHURCH PLUS Benin liberates people from
+                          religious bondage through the gospel of grace. Starting with 37 members, predominantly
+                          students, the church fosters a dynamic worship environment promoting love, friendship, and
+                          excellence. With a vision to raise world leaders, the church invites all to join their
+                          journey of serving God with love and dedication.</p>
+
+
+                        <a href="" class="button3d" style="font-size: 0.9em;">READ MORE</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="single_study_right_img">
+                <div class="col-sm-6">
+                  <div class="single_study_img">
+                    <img src="assets/images/pexels-brettjordan-5018579.jpg" alt="" /><BR>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- End off row -->
+      </div><!-- End off Container -->
+    </section><!-- End off Study Section -->
+
+
+
+    <section class="upcoming-meetings" id="meetings">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h6 style="font-size: 2em; font-weight: 600; color: white;">SERVICES</h6><BR><br>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="categories">
+              <h4>Explore Our Services </h4>
+              <ul>
+                <li><a href="bookourhall.html">Book Our Hall</a></li>
+                <li><a href="#blog">Check Our Programs</a></li>
+                <li><a href="https://wa.link/q65s14">Family Support</a></li>
+                <li><a href="https://wa.link/q65s14">Marriage Counseling</a></li>
+                <li><a href="https://wa.link/q65s14">Prayer for me</a></li><br>
+                <li><a href="#contact">Support Our Cause</a></li>
+
+              </ul>
+              <div class="button3d">
+                <a href="put excel calendar" style="color: #ffffff; text-decoration: none;">Yearly Calendar</a>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>MP3</span>
+                    </div>
+                    <a href="https://open.spotify.com/user/31xtnoiqwwdhn24qrwoht5xr7mu4?si=c6335ed38d22455f"><img
+                        src="assetsss/images/pexels-josh-sorenson-976866.jpg" alt=""></a>
+                  </div>
+                  <div class="down-content">
+                    <div class="date">
+                      <h6> <i class="fa fa-plus"></i></h6>
+                    </div>
+                    <a href="https://open.spotify.com/user/31xtnoiqwwdhn24qrwoht5xr7mu4?si=c6335ed38d22455f">
+                      <h4>Audio Store</h4>
+                    </a>
+                    <p>immerse yourself in uplifting messages. Explore and download spiritual content to enrich your
+                      journey of faith."</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>Live</span>
+                    </div>
+                    <a href="https://www.youtube.com/@cgmichurchplus5299/videos"><img
+                        src="assetsss/images/livestream-e1499463244756.jpg" alt=""></a>
+                  </div>
+                  <div class="down-content">
+                    <div class="date">
+                      <h6> <i class="fa fa-plus"></i></h6>
+                    </div>
+                    <a href="https://www.youtube.com/@cgmichurchplus5299/videos">
+                      <h4>Live Stream</h4>
+                    </a>
+                    <p>Connect and engage with our congregation through live streams, experiencing uplifting worship,
+                      insightful sermons, and vibrant community events from the comfort of your home.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>New</span>
+                    </div>
+                    <a href="cgmichurchplus email"><img src="assetsss/images/new b.png" alt=""></a>
+                  </div>
+                  <div class="down-content">
+                    <div class="date">
+                      <h6> <i class="fa fa-plus"></i></h6>
+                    </div>
+                    <a href="cgmi church plus email">
+                      <h4>MAIL US</h4>
+                    </a>
+                    <p>For new believers welcome to a place where faith blooms and community thrives. Join us in
+                      exploring the foundations of belief, nurturing your newfound spirituality.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="main_blog sections">
+            <div class="head_title text-center">
+              <h2>CHURCH PROGRAMS</h2>
+              <div class="subtitle">
+                Discover our programs for spiritual growth and community engagement.
+              </div>
+
+              <div class="separator"></div>
+            </div><!-- End off Head_title -->
+
+            <div class="main_blog_content">
+              <div class="col-sm-6">
+                <div class="single_blog_area textwhite">
+                  <div class="row">
+                    <div class="col-sm-6 no-padding">
+                      <div class="single_blog_img">
+                        <img src="assetss/images/WhatsApp Image 2024-04-27 at 19.31.58_dead309b.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6 no-padding">
+                      <div class="single_blog_text s_b_left">
+
+                        <h3>BREAKING THE CLAWS OF SCARCITY</h3>
+                        <div class="separator2"></div>
+                        <p>Join us for a journey towards financial advancement and prosperity. Learn strategies to
+                          overcome scarcity mindset and achieve financial abundance. Discover how to cultivate a mindset
+                          of abundance.</p>
+                        <a href="https://wa.link/q65s14" class="read_more">JOIN US >></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="single_blog_area textwhite">
+                  <div class="row">
+                    <div class="col-sm-6 no-padding">
+                      <div class="single_blog_img">
+                        <img src="assetss/images/WhatsApp Image 2024-04-27 at 19.31.58_dead309b.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6 no-padding">
+                      <div class="single_blog_text s_b_left">
+
+                        <h3>LIGHT CONFERENCE</h3>
+                        <div class="separator2"></div>
+                        <p>Illuminate your path with inspiration and knowledge at our Light Conference. Join us for an
+                          experience filled with enlightening talks, uplifting worship, Connect with like-minded
+                          individuals on a journey of faith and personal growth.</p>
+
+                        <a href="https://wa.link/q65s14" class="read_more">Join Us >></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="single_blog_area textwhite">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-sm-push-6 no-padding">
+                      <div class="single_blog_img">
+                        <img src="assetss/images/WhatsApp Image 2024-04-27 at 19.31.58_dead309b.jpg" alt="" />
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-sm-pull-6 no-padding">
+                      <div class="single_blog_text s_b_right">
+                        <h3>MEDICAL MISSIONS</h3>
+                        <div class="separator2"></div>
+                        <p>Participate in medical outreach trips to remote areas, offering free medical consultations,
+                          screenings, and treatments. Whether you're a healthcare professional or volunteer, your
+                          contribution makes a meaningful difference in enhancing quality of life for people.</p>
+
+                        <a href="https://wa.link/q65s14" class="read_more">Join Us >></a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="single_blog_area textwhite">
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-push-6 no-padding">
+                      <div class="single_blog_img">
+                        <img src="assetss/images/WhatsApp Image 2024-04-27 at 19.31.58_dead309b.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-sm-pull-6 no-padding">
+                      <div class="single_blog_text s_b_right">
+
+                        <h3>MISSION OUTREACH PROGRAM</h3>
+                        <div class="separator2"></div>
+                        <p>Join us in making a tangible difference in the lives of others through our Mission Outreach
+                          Program. Engage in local and international missions, volunteer projects, and humanitarian
+                          efforts aimed at addressing poverty, hunger, homelessness, and social injustice.</p>
+
+                        <a href="https://wa.link/q65s14" class="read_more">Join Us >></a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End off container -->
+    </section><!-- End off Blog Section -->
+
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact_contant sections">
+              <div class="head_title text-center">
+                <h2>CONNECT <i class="fa fa-wifi "></i> </h2>
+                <div class="subtitle" style="font-size: 1.3em;">
+                  Hey there, friend! We're here to listen and support you in any way we can.<br> Whether you have
+                  questions, need a prayer, or want to get involved, feel free to reach out.<BR> Our doors are always
+                  open, and we're excited to connect with you!
+                </div>
+                <div class="separator"></div>
+              </div><!-- End off Head_title -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="main_contact_info">
+                    <div class="row">
+                      <div class="contact_info_content padding-top-90 padding-bottom-60 p_l_r">
+                        <div class="col-sm-12">
+                          <div class="single_contact_info">
+                            <div class="single_info_text">
+                              <h3>OUR ADDRESS</h3>
+                              <h4>No 154, Siloko Road Benin City.</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="single_contact_info">
+                            <div class="single_info_text">
+                              <h3>CALL US</h3>
+                              <h4>+234 810000000</h4>
+                              <h4>+234 810000000</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="single_contact_info">
+                            <div class="single_info_text">
+                              <h3>EMAIL US</h3>
+                              <h4>cgmichurchplus@gmail.com</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="single_contant_left padding-top-90 padding-bottom-90">
+                    <form action="#" id="formid">
+                      <div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
+
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="name" placeholder="First Name" required="">
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                          <textarea class="form-control" name="message" rows="7" placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="">
+                          <input type="submit" value="SEND MESSAGE" class="button3d">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End of contact section -->
+    <section id="map" class="map">
+      <div class="map_container">
+        <!-- Embed Google Maps -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.318284121854!2d5.599262873863332!3d6.352825425125527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d2e1bab4b0ab%3A0xa447e3a3ee22fe40!2s154%20Siluko%20Rd%2C%20opp.%20Bamby%20Hospital%2C%20Okhokhugbo%2C%20Benin%20City%20300102%2C%20Edo!5e0!3m2!1sen!2sng!4v1714561984665!5m2!1sen!2sng"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+
+    <!--Footer section-->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="main_footer">
+              <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                  <div class="flowus">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-youtube"></i></a>
+                    <a href=""><i class="fa fa-dribbble"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-xs-12">
+                  <div class="copyright_text">
+                    <p class=" wow fadeInRight" data-wow-duration="1s">2024. All Rights<a href="index.html">CGMI CHURCH
+                        PLUS</a>
+                      Reserved</p>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End off footer Section-->
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- START SCROLL TO TOP  -->
+
+  <div class="scrollup">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
+  </div>
+
+
+
+  <!--slick slide js -->
+  <script src="assets/css/slick/slick.js"></script>
+  <script src="assets/css/slick/slick.min.js"></script>
+
+
+  <script src="assetss/js/plugins.js"></script>
+  <script src="assetss/js/main.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assetss/js/owl-carousel.js"></script>
+  <script src="assetss/js/animation.js"></script>
+  <script src="assetss/js/imagesloaded.js"></script>
+  <script src="assetss/js/custom.js"></script>
+  <script>
+    // Acc
+    $(document).on("click", ".naccs .menu div", function () {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+        $(".naccs .menu div").removeClass("active");
+        $(".naccs ul li").removeClass("active");
+
+        $(this).addClass("active");
+        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+        var listItemHeight = $(".naccs ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs ul").height(listItemHeight + "px");
+      }
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
