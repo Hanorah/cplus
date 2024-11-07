@@ -377,6 +377,7 @@
     <body data-spy="scroll" data-target=".navbar-collapse">
 
 
+
         <div class="culmn">
             <nav>
                 <div class="wrapper">
@@ -392,18 +393,30 @@
                         <li>
                             <a href="#" class="desktop-item">Book our hall</a>
                             <input type="checkbox" id="showDrop">
-                            <label for="showDrop" class="mobile-item">Book Appointment</label>
+                            <label for="showMega" class="mobile-item">Book our Hall</label>
                             <ul class="drop-menu">
-                                <li><a href="#">Book Hall</a></li>
-                                <li><a href="#">Get Prayer </a></li>
-                                <li><a href="#">Join The C+ Family</a></li>
+                                <li><a href="contact.html">Book Hall</a></li>
+                                <li><a href="wa.link/a38vhm">Get Prayer </a></li>
+                                <li><a href="contact.html">Join The C+ Family</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="desktop-item">Support </a>
+                            <input type="checkbox" id="showDrop">
+                            <label for="showMega" class="mobile-item">Support</label>
+                            <ul class="drop-menu">
+                                <li><a href="https://paystack.com/pay/pluspartnership">Donate to the Church</a></li>
+                                <li><a href="https://paystack.com/pay/pluspartnership">Sponsor a Child</a></li>
+                                <li><a href="https://paystack.com/pay/pluspartnership">Plus Partnership Dues</a></li>
+                                <li><a href="https://paystack.com/pay/pluspartnership">Volunteer Opportunities</a></li>
 
                             </ul>
                         </li>
                         <li>
                             <a href="#" class="desktop-item">Counseling</a>
                             <input type="checkbox" id="showMega">
-                            <label for="showMega" class="mobile-item">Services Menu</label>
+                            <label for="showMega" class="mobile-item">Counseling</label>
                             <div class="mega-box">
                                 <div class="content">
                                     <!-- Image section -->
@@ -415,10 +428,10 @@
                                     <div class="row">
                                         <header>Individual Counseling</header>
                                         <ul class="mega-links">
-                                            <li><a href="#">Personal Growth</a></li>
-                                            <li><a href="#">Stress Management</a></li>
-                                            <li><a href="#">Grief Counseling</a></li>
-                                            <li><a href="#">Confidence Building</a></li>
+                                            <li><a href="contact.html">Personal Growth</a></li>
+                                            <li><a href="contact.html">Stress Management</a></li>
+                                            <li><a href="contact.html">Grief Counseling</a></li>
+                                            <li><a href="contact.html">Confidence Building</a></li>
                                         </ul>
                                     </div>
 
@@ -426,10 +439,10 @@
                                     <div class="row">
                                         <header>Group Counseling</header>
                                         <ul class="mega-links">
-                                            <li><a href="#">Support Groups</a></li>
-                                            <li><a href="#">Family Counseling</a></li>
-                                            <li><a href="#">Addiction Recovery</a></li>
-                                            <li><a href="#">Youth Empowerment</a></li>
+                                            <li><a href="contact.html">Support Groups</a></li>
+                                            <li><a href="contact.html">Family Counseling</a></li>
+                                            <li><a href="contact.html">Addiction Recovery</a></li>
+                                            <li><a href="contact.html">Youth Empowerment</a></li>
                                         </ul>
                                     </div>
 
@@ -437,24 +450,25 @@
                                     <div class="row">
                                         <header>Spiritual Guidance</header>
                                         <ul class="mega-links">
-                                            <li><a href="#">Faith-Based Counseling</a></li>
-                                            <li><a href="#">Life Purpose Coaching</a></li>
-                                            <li><a href="#">Meditation and Mindfulness</a></li>
-                                            <li><a href="#">Prayer Support</a></li>
+                                            <li><a href="contact.html">Faith-Based Counseling</a></li>
+                                            <li><a href="contact.html">Life Purpose Coaching</a></li>
+                                            <li><a href="contact.html">Meditation and Mindfulness</a></li>
+                                            <li><a href="contact.html">Prayer Support</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </li>
+
 
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <label for="menu-btn" class="btn menu-btn"><i class="fa fa-bars fa-2x"
-                            style="margin-bottom: 0.5em; "></i>
+                            style="margin-bottom: 0.5em;"></i>
                     </label>
                 </div>
             </nav>
         </div>
+
 
 
         <style>
@@ -761,10 +775,63 @@
                             Book Hall
                         </label>
 
+                        <!-- "Counseling" is now a checkbox instead of a radio button -->
                         <label>
-                            <input type="radio" name="reason" value="Counseling">
+                            <input type="checkbox" name="reason" value="Counseling"
+                                onclick="toggleCounselingList(this.checked)">
                             Counseling
                         </label>
+
+                        <!-- Hidden list with checkboxes that appears when "Counseling" is checked -->
+                        <ul id="counselingOptions" style="display: none; margin-left: 20px;">
+                            <li><label><input type="checkbox" name="counselingOptions" value="Individual Counseling">
+                                    Individual Counseling</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Personal Growth"> Personal
+                                    Growth</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Stress Management"> Stress
+                                    Management</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Grief Counseling"> Grief
+                                    Counseling</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Confidence Building">
+                                    Confidence Building</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Group Counseling"> Group
+                                    Counseling</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Support Groups"> Support
+                                    Groups</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Family Counseling"> Family
+                                    Counseling</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Addiction Recovery">
+                                    Addiction Recovery</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Youth Empowerment"> Youth
+                                    Empowerment</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Spiritual Guidance">
+                                    Spiritual Guidance</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Faith-Based Counseling">
+                                    Faith-Based Counseling</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Life Purpose Coaching">
+                                    Life Purpose Coaching</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions"
+                                        value="Meditation and Mindfulness"> Meditation and Mindfulness</label></li>
+                            <li><label><input type="checkbox" name="counselingOptions" value="Prayer Support"> Prayer
+                                    Support</label></li>
+                        </ul>
+
+
+                        <script>
+                            function toggleCounselingList(show) {
+                                document.getElementById("counselingOptions").style.display = show ? "block" : "none";
+                            }
+
+                            // Make sure other options deselect "Counseling" when clicked
+                            document.querySelectorAll('input[name="reason"]').forEach((input) => {
+                                input.addEventListener('change', () => {
+                                    if (input.value !== "Counseling") {
+                                        document.querySelector('input[value="Counseling"]').checked = false;
+                                        toggleCounselingList(false);
+                                    }
+                                });
+                            });
+                        </script>
 
                         <label>
                             <input type="radio" name="reason" value="Get Prayer">
