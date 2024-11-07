@@ -167,6 +167,7 @@ a:hover {
 
 .video {
   position: relative;
+
 }
 
 .video:before {
@@ -214,6 +215,40 @@ a:hover {
     width: 80px;
     line-height: 80px;
     font-size: 22px;
+ 
+  }
+}
+@media (max-width: 1024px) {
+  .video {
+    margin-top: 40%;
+}
+}
+
+/* For tablets in portrait mode (up to 768px) */
+@media (max-width: 768px) {
+  .video {
+    margin-top: 40%;
+}
+}
+
+/* For smartphones in landscape mode (up to 600px) */
+@media (max-width: 600px) {
+  .video {
+    margin-top: 40%;
+}
+}
+
+/* For smartphones in portrait mode (up to 480px) */
+@media (max-width: 480px) {
+  .video {
+    margin-top: 40%;
+}
+}
+
+/* For very small screens (up to 320px) */
+@media (max-width: 320px) {
+  .video {
+      margin-top: 40%;
   }
 }
 
