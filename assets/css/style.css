@@ -303,7 +303,7 @@ Separator
     height: 2px;
     width: 30px;
     margin:20px 0px;
-    background: red;
+    background: blue;
 }
 
 
@@ -333,13 +333,13 @@ Button
 .btn-primary.disabled,
 .btn-primary.disabled:hover {
     color: #ffffff;
-    background-color: red;
-    border-color: red;
+    background-color: blue;
+    border-color: blue;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: red;
-    border-color: red;
+    background-color: blue;
+    border-color:blue ;
 }
 .btn {
     display: inline-block;
@@ -352,7 +352,7 @@ Button
     border-radius: 0px;
     margin-top: 20px;
     transition: .5s;
-    border: 1px solid red;
+   
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     padding: 0.8rem 3rem;
@@ -370,11 +370,11 @@ Button
     padding: 1.125rem 3rem;
 }
 .btn-default:hover{
-    background: red;
-    border:1px solid red;
+    background: blue;
+    border:1px solid blue;
 }
 .btn-lg{
-    background: red;
+    background: blue;
     padding: 1.125rem 3rem;
 }
 .btn-md{
@@ -512,9 +512,9 @@ input::-ms-input-placeholder {
 }
 
 .main_menu_bg .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-    color: red;
+    color: blue;
     padding-bottom: 22px;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid blue;
     background: transparent;
 
 }
@@ -643,16 +643,7 @@ input::-ms-input-placeholder {
     transition: all 0.6s;
 }
 
-/*==================================================================
-            History section Style
-====================================================================*/
-.main_history{
 
-}
-.main_history .single_history_content .head_title h2{
-    border-left:6px solid red;
-    padding-left: 30px;
-}
 
 
 /*==================================================================
